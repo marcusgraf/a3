@@ -1,0 +1,147 @@
+<ion-navbar *navbar class="navigation">
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Home</ion-title>
+
+</ion-navbar>
+
+<ion-content class="onboading">
+
+    <div class="onboarding-step step1" *ngIf="onboardingStep==1">
+
+        <h2 class="question-headline">
+            Hi!
+        </h2>
+
+        <div class="question-text">
+            Bevor es losgeht brauchen wir noch ein paar Infos von Dir.
+        </div>
+
+        <div>
+            <div class="widebutton" (click)="setUserSex('boy')">
+                Ich bin Männlich
+            </div>
+            <div class="widebutton" (click)="setUserSex('girl')">
+                Ich bin Weiblich
+            </div>
+        </div>
+
+    </div>
+
+    <div class="onboarding-step step2" *ngIf="onboardingStep==2">
+
+        <h2 class="question-headline">
+            Fitnesslevel
+        </h2>
+
+        <div class="question-text">
+            Wie schätzt du dein Fitnesslevel zur Zeit ein?
+        </div>
+
+        <div class="widebutton" (click)="setUserFitnessLevel(1)">
+            Ich bin nicht fit
+        </div>
+
+        <div class="widebutton" (click)="setUserFitnessLevel(2)">
+            Ich bin ziemlich fit
+        </div>
+
+        <div class="widebutton" (click)="setUserFitnessLevel(3)">
+            Ich bin definitiv fit
+        </div>
+
+
+    </div>
+
+    <div class="onboarding-step step3" *ngIf="onboardingStep==3">
+
+        <h2 class="question-headline">
+            Zeil?
+        </h2>
+
+        <div class="question-text">
+            Was willst du erreichen?
+        </div>
+
+        <div class="widebutton" (click)="setUserGoal('lose fat')">
+            Ich will abnehmen
+        </div>
+
+        <div class="widebutton" (click)="setUserGoal('get fitter')">
+            Ich will fit werden
+        </div>
+
+        <div class="widebutton" (click)="setUserGoal('gain muscle mass')">
+            Ich will Muskeln aufbauen
+        </div>
+
+    </div>
+
+    <div class="onboarding-step step4" *ngIf="onboardingStep==4">
+
+        <h2 class="question-headline">
+            Deine Ernährung
+        </h2>
+
+        <div class="question-text">
+            Wie willst du dich Ernähren?
+        </div>
+
+        <div class="widebutton" (click)="setUserGoal('lose fat')">
+            Keine Präferenzen
+        </div>
+
+        <div class="widebutton" (click)="setUserGoal('get fitter')">
+            Pescetarisch
+        </div>
+
+        <div class="widebutton" (click)="setUserGoal('gain muscle mass')">
+            Vegitarisch
+        </div>
+
+        <div class="widebutton" (click)="setUserGoal('gain muscle mass')">
+            Vegan
+        </div>
+
+    </div>
+
+    <div class="onboarding-step step5" *ngIf="onboardingStep==5">
+
+        <h2 class="question-headline">
+            Fast geschafft!
+        </h2>
+
+        <div class="question-text">
+            Wir brauchen allerdings noch deine Größe, Gewicht und Alter um deinen Kalorienbedarf zu berechnen.
+        </div>
+
+        <form (ng-submit)="onSubmit()" [ng-form-model]="form" #f="form">
+            <ion-list inset>
+
+                <ion-item class="question-input">
+                    <ion-label>Geburtsdatum</ion-label>
+                    <ion-datetime displayFormat="D MMMM YYYY" pickerFormat="D MMMM YYYY" [(ngModel)]="isoDate"></ion-datetime>
+                </ion-item>
+
+                <ion-item class="question-input">
+                    <ion-label>Gewicht in kg</ion-label>
+                    <ion-input type="number" placeholder="" min="20" max="300"></ion-input>
+                </ion-item>
+
+                <ion-item class="question-input">
+                    <ion-label>Größe in cm</ion-label>
+                    <ion-input type="text" placeholder="" min="100" max="300"></ion-input>
+                </ion-item>
+
+            </ion-list>
+
+            <button type="submit" [disabled]="!f.form.valid">Submit</button>
+        </form>
+
+    </div>
+
+
+
+</ion-content>

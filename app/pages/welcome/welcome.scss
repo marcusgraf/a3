@@ -1,0 +1,36 @@
+.welcome {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  background-size: 320px;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  .bottom-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 28px 18px;
+  }
+
+  .main-button {
+    display: block;
+    background: #7DC85E;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+  .secondary-button {
+    padding: 18px 0 5px;
+    color: #7DC85E;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
