@@ -1,8 +1,4 @@
-<ion-menu [content]="content">
-
-  <ion-toolbar>
-    <ion-title>Pages</ion-title>
-  </ion-toolbar>
+<ion-menu *ngIf="currentUser" [content]="content">
 
   <ion-content>
     <ion-list>

@@ -3,7 +3,10 @@
     "target": "es5",
     "module": "commonjs",
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "noImplicitAny": false
   },
   "filesGlob": [
     "**/*.ts",
@@ -11,6 +14,7 @@
   ],
   "exclude": [
     "node_modules",
+    "typings",
     "typings/main",
     "typings/main.d.ts"
   ],

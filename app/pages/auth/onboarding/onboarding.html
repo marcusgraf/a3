@@ -20,11 +20,11 @@
         </div>
 
         <div>
-            <div class="widebutton" (click)="setUserSex('boy')">
-                Ich bin Männlich
+            <div class="widebutton" (click)="setUserSex('male')">
+                Ich bin ein Mann
             </div>
-            <div class="widebutton" (click)="setUserSex('girl')">
-                Ich bin Weiblich
+            <div class="widebutton" (click)="setUserSex('female')">
+                Ich bin eine Frau
             </div>
         </div>
 
@@ -37,19 +37,23 @@
         </h2>
 
         <div class="question-text">
-            Wie schätzt du dein Fitnesslevel zur Zeit ein?
+            Wie oft trainierst Du zurzeit?
         </div>
 
         <div class="widebutton" (click)="setUserFitnessLevel(1)">
-            Ich bin nicht fit
+            Fast nie
         </div>
 
         <div class="widebutton" (click)="setUserFitnessLevel(2)">
-            Ich bin ziemlich fit
+            1 Mal pro Woche
         </div>
 
         <div class="widebutton" (click)="setUserFitnessLevel(3)">
-            Ich bin definitiv fit
+            2 - 3 Mal pro Woche
+        </div>
+
+        <div class="widebutton" (click)="setUserFitnessLevel(3)">
+            4 Mal und öfter
         </div>
 
 
@@ -58,11 +62,11 @@
     <div class="onboarding-step step3" *ngIf="onboardingStep==3">
 
         <h2 class="question-headline">
-            Zeil?
+            Dein TrainingsZiel?
         </h2>
 
         <div class="question-text">
-            Was willst du erreichen?
+            Was willst Du erreichen?
         </div>
 
         <div class="widebutton" (click)="setUserGoal('lose fat')">
@@ -89,19 +93,19 @@
             Wie willst du dich Ernähren?
         </div>
 
-        <div class="widebutton" (click)="setUserGoal('lose fat')">
+        <div class="widebutton" (click)="setUserMealType('default')">
             Keine Präferenzen
         </div>
 
-        <div class="widebutton" (click)="setUserGoal('get fitter')">
+        <div class="widebutton" (click)="setUserMealType('pescetarian')">
             Pescetarisch
         </div>
 
-        <div class="widebutton" (click)="setUserGoal('gain muscle mass')">
+        <div class="widebutton" (click)="setUserMealType('vegetarian')">
             Vegitarisch
         </div>
 
-        <div class="widebutton" (click)="setUserGoal('gain muscle mass')">
+        <div class="widebutton" (click)="setUserMealType('vegan')">
             Vegan
         </div>
 
@@ -117,28 +121,26 @@
             Wir brauchen allerdings noch deine Größe, Gewicht und Alter um deinen Kalorienbedarf zu berechnen.
         </div>
 
-        <form (ng-submit)="onSubmit()" [ng-form-model]="form" #f="form">
-            <ion-list inset>
+    <ion-list inset>
 
-                <ion-item class="question-input">
-                    <ion-label>Geburtsdatum</ion-label>
-                    <ion-datetime displayFormat="D MMMM YYYY" pickerFormat="D MMMM YYYY" [(ngModel)]="isoDate"></ion-datetime>
-                </ion-item>
+        <ion-item class="question-input">
+            <ion-label>Geburtsdatum</ion-label>
+            <ion-datetime displayFormat="MMM D, YYYY" pickerFormat="D MMM YYYY" [(ngModel)]="birthDate" (ionChange)="setUserDOB(birthDate)"></ion-datetime>
+        </ion-item>
 
-                <ion-item class="question-input">
-                    <ion-label>Gewicht in kg</ion-label>
-                    <ion-input type="number" placeholder="" min="20" max="300"></ion-input>
-                </ion-item>
+        <ion-item class="question-input">
+            <ion-label>Gewicht in kg</ion-label>
+            <ion-input type="number" placeholder="" min="20" max="300" [(ngModel)]="userWeight"></ion-input>
+        </ion-item>
 
-                <ion-item class="question-input">
-                    <ion-label>Größe in cm</ion-label>
-                    <ion-input type="text" placeholder="" min="100" max="300"></ion-input>
-                </ion-item>
+        <ion-item class="question-input">
+            <ion-label>Größe in cm</ion-label>
+            <ion-input type="text" placeholder="" min="100" max="300" [(ngModel)]="userHeight"></ion-input>
+        </ion-item>
 
-            </ion-list>
+        <button full [disabled]="!birthDate || !userHeight || !userWeight" (click)="finishOnboarding()">Jetzt Loslegen!</button>
 
-            <button type="submit" [disabled]="!f.form.valid">Submit</button>
-        </form>
+    </ion-list>
 
     </div>
 

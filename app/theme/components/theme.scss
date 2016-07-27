@@ -1,0 +1,101 @@
+.card {
+  min-height: 500px;
+  background-color: #fff;
+  padding: 25% 10%;
+  //box-shadow: 0 0 3rem 0 rgba(0,0,0,0.1);
+  //margin: 20px;
+  box-shadow: 0px 0px 16px 10px rgba(0,0,0,0.1);
+
+  &.workout-bg {
+    background-image: url("http://www.spab-rice.com/themeforest/sudo/demo/files/uploads/fitness-5.jpg");
+  }
+
+  &.mealplan-bg {
+    background-image: url("../../img/onboarding/bg_tour_2.jpg");
+  }
+
+  &.card-bg {
+    position: relative;
+    background-color: #111;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+
+    &::before {
+      @include linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.5));
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      //background-color: rgba(0,0,0,0.3);
+    }
+
+    p {
+      color: #fff;
+    }
+  }
+
+  h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    text-shadow: 0 0 80px rgba(0,0,0,.2);
+  }
+
+  p {
+    padding: 0 0 5% 0;
+    font-size: 16px;
+    color: #767676;
+    text-shadow: 0 0 80px rgba(0,0,0,.2);
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .card-content {
+    position: relative;
+  }
+
+  .icon--lg {
+    display: block;
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+}
+
+.counter {
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  line-height: 26px;
+  margin-top: .625rem;
+  margin-right: .9375rem;
+  border-radius: 50%;
+  background-color: #edece8;
+  color: #393939;
+  text-align: center;
+  font-size: 10px;
+
+  &.checked {
+    background-color: #00aeef;
+    color: #fff;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.entry-content {
+  padding: 20px;
+  line-height: 1.8;
+
+  h1 {
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+}

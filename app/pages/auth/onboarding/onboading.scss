@@ -1,13 +1,13 @@
 .onboading {
   .onboarding-step {
-    background-image: url("/img/onboarding/register.jpg");
+    background-image: url("../../img/onboarding/register.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
   }
 
   .step1 {
-    background-image: url("/img/onboarding/register.jpg");
+    background-image: url("../../img/onboarding/register.jpg");
   }
 
   .step2 {
@@ -24,63 +24,5 @@
 
   .step5 {
 
-  }
-
-  .question-headline {
-    width: 70%;
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 100px 0 20px;
-    text-transform: uppercase;
-  }
-
-  .question-text {
-    width: 70%;
-    margin: 0 auto 40px;
-    color: #fff;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .question-input {
-    display: block;
-    width: 90%;
-    margin: 25px auto;
-    padding: 4px 5px;
-    font-size: 16px;
-    color: #fff;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: left;
-    line-height: 1;
-    border-bottom: 0 none!important;
-
-    ion-label {
-      color: #fff;
-    }
-
-    ion-input {
-      padding-right: 6px;
-      text-align: right;
-    }
-
-    input {
-      margin: 0;
-      padding: 0;
-      text-align: right;
-    }
-  }
-
-  .widebutton {
-    display: block;
-    width: 90%;
-    margin: 25px auto;
-    padding: 15px 5px;
-    font-size: 16px;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
   }
 }

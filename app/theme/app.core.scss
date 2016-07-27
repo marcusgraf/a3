@@ -7,50 +7,106 @@
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
 
-@import "../pages/auth/home/home";
-@import "../pages/auth/login-email/login-email";
+@import "app.ionic.overwrites";
+@import "tools/tools";
+
+@import "fonts/default-fonts";
+@import "fonts/iconsmind";
+
+@import "components/theme";
+@import "components/btn";
+@import "components/workout-lists";
+
 @import "../pages/auth/sign-up/sign-up";
 @import "../pages/auth/forgot-password/forgot-password";
 @import "../pages/auth/onboarding/onboading";
-@import "../pages/welcome/welcome";
+@import "../pages/auth/terms-of-service/terms-of-service";
 @import "../pages/home/home";
-@import "../pages/terms-of-service/terms-of-service";
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/montserrat-bold-webfont.eot");
-  src: url("/fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/montserrat-bold-webfont.woff2") format("woff2"), url("/fonts/montserrat-bold-webfont.woff") format("woff"), url("/fonts/montserrat-bold-webfont.ttf") format("truetype");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url('/fonts/regular/opensans-regular-webfont.eot');
-  src: url('/fonts/regular/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/regular/opensans-regular-webfont.woff') format('woff'), url('/fonts/regular/opensans-regular-webfont.ttf') format('truetype'), url('/fonts/regular/opensans-regular-webfont.svg#OpenSansRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url('/fonts/bold/opensans-bold-webfont.eot');
-  src: url('/fonts/bold/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/bold/opensans-bold-webfont.woff') format('woff'), url('/fonts/bold/opensans-bold-webfont.ttf') format('truetype'), url('/fonts/bold/opensans-bold-webfont.svg#OpenSansBold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
 
 body {
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
+  color: #767676;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-weight: 700;
-  letter-spacing: -1px;
 }
 
-.navigation {
-  display: none!important;
+.background {
+  background-image: url("../../img/welcome-dark.jpg");
+  background-color: #111;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 71% 50%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.question-headline {
+  width: 70%;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 60px 0 20px;
+}
+
+.question-text {
+  width: 70%;
+  margin: 0 auto 40px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.question-input {
+  display: block;
+  width: 90%;
+  margin: 15px auto;
+  padding: 0;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: left;
+  line-height: 1;
+  border-bottom: 0 none!important;
+  border-radius: 3px;
+
+  ion-label {
+    color: #fff;
+    padding-left: 6px;
+  }
+
+  ion-input {
+    padding-left: 16px;
+    text-align: right;
+  }
+
+  input {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+
+  .item-inner {
+    border: 0 none!important;
+  }
+}
+
+.widebutton {
+  display: block;
+  width: 90%;
+  margin: 15px auto;
+  padding: 22px 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.fb-blue {
+  background-color: #3b5998;
 }

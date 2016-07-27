@@ -1,1 +1,3 @@
-/// <reference path="modules/firebase/index.d.ts" />
+/// <reference path="globals/es6-collections/index.d.ts" />
+/// <reference path="globals/es6-promise/index.d.ts" />
+/// <reference path="globals/firebase3/index.d.ts" />

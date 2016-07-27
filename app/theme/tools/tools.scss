@@ -1,0 +1,3 @@
+@mixin linear-gradient($top, $bottom) {
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%); // [1]
+}

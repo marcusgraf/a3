@@ -1,0 +1,42 @@
+.workout-list {
+
+  .workout-item {
+    height: 78px;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #e1e1e1!important;
+
+    ion-thumbnail {
+      min-width: 78px;
+      min-height: 78px;
+
+      img {
+        max-width: 78px;
+        max-height: 78px;
+        margin: 0;
+      }
+    }
+
+    ion-avatar[item-left], ion-thumbnail[item-left] {
+      margin: 0 20px 0 0;
+    }
+
+    .item-inner {
+      border: 0 none;
+    }
+
+    .item-headline {
+      width: 60%;
+      font-size: 14px;
+      font-family: 'Open Sans';
+      font-weight: 700;
+      white-space: normal;
+      color: #000;
+    }
+
+    .item-text {
+      font-family: 'Open Sans';
+      color: #7e7e7e;
+    }
+  }
+}
