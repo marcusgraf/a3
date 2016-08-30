@@ -29,3 +29,16 @@
     margin-top: 4px;
   }
 }
+
+.btn-footer {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  background: color($colors, primary);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 0;
+}

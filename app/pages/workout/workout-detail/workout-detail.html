@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>{{workout.name}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <div class="workout-opener">
+        <ion-img src="{{workout.image}}"></ion-img>
+    </div>
+
+    <ion-list class="workout-list" [virtualScroll]="workoutExercises">
+        <ion-item class="workout-item" *virtualItem="let exercise">
+            <ion-thumbnail item-left>
+                <img src="{{exercise.exercise.exercise_thumbnail}}">
+            </ion-thumbnail>
+
+            <p class="exercise-repeats">
+                <span>exercise.workout_exercise_sets</span>
+                Sätze
+            </p>
+
+            <h2 class="item-headline" [innerHTML]="exercise.exercise.exercise_name"></h2>
+            <p class="item-text" [innerHTML]="exercise.workout_exercise_sets + ' Sätze'"></p>
+        </ion-item>
+    </ion-list>
+
+    <div class="btn btn-footer">
+        Workout Starten
+    </div>
+</ion-content>

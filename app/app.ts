@@ -3,13 +3,15 @@ import {StatusBar} from "ionic-native";
 import {Component, ViewChild} from "@angular/core";
 import * as firebase from 'firebase';
 
+// Provider
+import { ExerciseData } from './providers/exercise-data/exercise-data';
+
 // Auth
 import {LoginPage} from "./pages/auth/login/login";
 import {OnboardingPage} from "./pages/auth/onboarding/onboarding";
 
 // Main
 import {TabsPage} from "./pages/tabs/tabs";
-import {HomePage} from "./pages/home/home";
 import {WorkoutListPage} from "./pages/workout/workout-list/workout-list";
 import {ExerciseListPage} from "./pages/workout/exercise-list/exercise-list";
 import {ProfilePage} from "./pages/profile/profile";
@@ -54,20 +56,21 @@ class MyApp {
               !snapshot.child("mealType").exists() ||
               !snapshot.child("sex").exists() ||
               !snapshot.child("weight").exists()) {
-            that.nav.setRoot(OnboardingPage);
+            //that.nav.setRoot(OnboardingPage);
           }
           else {
-            that.nav.setRoot(TabsPage);
+            //that.nav.setRoot(TabsPage);
           }
         });
       } else {
         // If there's no user logged in send him to the LoginPage
-        this.nav.setRoot(LoginPage);
+        //this.nav.setRoot(LoginPage);
       }
     });
 
     this.pages = [
       { title: "Startseite", component: TabsPage },
+      { title: "Workouts", component: WorkoutListPage },
       { title: "Übungen", component: ExerciseListPage },
       { title: "Onboarding", component: OnboardingPage },
       { title: "Login", component: LoginPage },
@@ -82,7 +85,7 @@ class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
-      this.nav.setRoot(TabsPage);
+      this.nav.setRoot(WorkoutListPage);
     });
   }
 

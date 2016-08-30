@@ -15,25 +15,10 @@
 
 <ion-content class="workout-list">
 
-    <ion-list>
-
-        <ion-item-sliding *ngFor="let note of notes">
-
-            <ion-item>
-                {{note.title}}
-            </ion-item>
-
-            <ion-item-options>
-                <button (click)="editNote(note)" light>
-                    <ion-icon name="paper"></ion-icon>
-                </button>
-                <button (click)="deleteNote(note)" danger>
-                    <ion-icon name="trash"></ion-icon>
-                </button>
-            </ion-item-options>
-
-        </ion-item-sliding>
-
+    <ion-list class="workout-list" [virtualScroll]="allWorkouts">
+        <ion-item class="workout-item" *virtualItem="let workout" (click)="viewWorkout($event,workout)">
+            <h2 class="item-headline" [innerHTML]="workout.name"></h2>
+        </ion-item>
     </ion-list>
 
 </ion-content>

@@ -9,6 +9,8 @@ a {
 
 ion-header {
   box-shadow: 0 0 3rem 0 rgba(0,0,0,0.1);
+  box-shadow: 0 0 100px rgba(0,0,0,0.15);
+  box-shadow: 0px 4px 10px 0 rgba(22,22,22,0.08);
 
   .toolbar-background {
     background-color: #fff;
@@ -20,10 +22,9 @@ ion-header {
   }
 
   .toolbar-title {
-    font-size: 20px;
-    font-family: Montserrat;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: -1px;
-    text-transform: uppercase;
     font-weight: 700;
     color: #000;
   }
