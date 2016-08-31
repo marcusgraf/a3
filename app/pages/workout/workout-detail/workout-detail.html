@@ -11,6 +11,18 @@
 
     <div class="workout-opener">
         <ion-img src="{{workout.image}}"></ion-img>
+
+        <div class="img-overlay">
+            <h1>{{workout.name}}</h1>
+
+            <div class="workout-info">
+                <b>Trainingsziel: </b>Brust, Schultern, Arme
+            </div>
+
+            <div class="btn">
+                Workout Starten
+            </div>
+        </div>
     </div>
 
     <ion-list class="workout-list" [virtualScroll]="workoutExercises">
@@ -19,17 +31,16 @@
                 <img src="{{exercise.exercise.exercise_thumbnail}}">
             </ion-thumbnail>
 
-            <p class="exercise-repeats">
-                <span>exercise.workout_exercise_sets</span>
-                Sätze
+            <h2 class="item-headline" [innerHTML]="exercise.exercise.exercise_name"></h2>
+            <p class="item-text">
+                <span class="amount" [innerHTML]="exercise.workout_exercise_sets"></span>
+                <span class="text">Sätze</span>
             </p>
 
-            <h2 class="item-headline" [innerHTML]="exercise.exercise.exercise_name"></h2>
-            <p class="item-text" [innerHTML]="exercise.workout_exercise_sets + ' Sätze'"></p>
         </ion-item>
     </ion-list>
 
-    <div class="btn btn-footer">
+    <!--<div class="btn btn-footer">
         Workout Starten
-    </div>
+    </div>-->
 </ion-content>

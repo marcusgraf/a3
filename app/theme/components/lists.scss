@@ -1,0 +1,102 @@
+.workout-list {
+
+  .workout-item {
+    height: 78px;
+    margin: 20px 0 0 20px;
+    padding: 0;
+    overflow: hidden;
+
+    ion-thumbnail {
+      min-width: 78px;
+      min-height: 78px;
+
+      img {
+        max-width: 78px;
+        max-height: 78px;
+        margin: 0;
+      }
+    }
+
+    ion-avatar[item-left], ion-thumbnail[item-left] {
+      margin: 0 100px 0 0;
+    }
+
+    .item-inner {
+      border: 0 none;
+    }
+
+    .item-headline {
+      width: 80%;
+      font-size: 14px;
+      font-family: 'Open Sans';
+      font-weight: 700;
+      white-space: normal;
+      color: #000;
+    }
+
+    .item-text {
+      color: #7e7e7e;
+      font-family: 'Open Sans';
+      font-size: 14px;
+      position: absolute;
+      left: 110px;
+      top: 20px;
+      text-align: center;
+
+      .amount {
+        font-size: 20px;
+        color: #000;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .text {
+        display: block;
+      }
+    }
+  }
+}
+
+.exercise-list {
+
+  .exercise-item {
+    height: 78px;
+    margin: 20px 0 0 20px;
+    padding: 0;
+    overflow: hidden;
+
+    ion-thumbnail {
+      min-width: 78px;
+      min-height: 78px;
+
+      img {
+        max-width: 78px;
+        max-height: 78px;
+        margin: 0;
+      }
+    }
+
+    ion-avatar[item-left], ion-thumbnail[item-left] {
+      margin: 0 20px 0 0;
+    }
+
+    .item-inner {
+      border: 0 none;
+    }
+
+    .item-headline {
+      width: 80%;
+      font-size: 14px;
+      font-family: 'Open Sans';
+      font-weight: 700;
+      white-space: normal;
+      color: #000;
+    }
+
+    .item-text {
+      color: #7e7e7e;
+      font-family: 'Open Sans';
+      font-size: 14px;
+    }
+  }
+}

@@ -20,15 +20,17 @@
 </ion-header>
 <ion-content>
 
-
-
-  <ion-list class="workout-list" [virtualScroll]="filteredExercises">
-    <ion-item class="workout-item" *virtualItem="let exercise" (click)="viewExercise($event,exercise)">
+  <ion-list class="exercise-list" [virtualScroll]="filteredExercises">
+    <ion-item class="exercise-item" *virtualItem="let exercise" (click)="viewExercise($event,exercise)">
       <ion-thumbnail item-left>
         <img src="{{exercise.exercise_thumbnail}}">
       </ion-thumbnail>
       <h2 class="item-headline" [innerHTML]="exercise.exercise_name"></h2>
-      <p class="item-text" [innerHTML]="exercise.exercise_muscles"></p>
+
+      <p class="item-text">
+        {{exercise.exercise_muscles}}
+      </p>
+
     </ion-item>
   </ion-list>
 </ion-content>
